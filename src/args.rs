@@ -20,3 +20,13 @@ pub struct Arguements {
     
 
 }
+
+impl Arguements {
+    pub fn readonly(&self) -> bool {
+        match self.readonly {
+            None => false,
+            Some(None) => true,
+            Some(Some(a)) => a
+        }
+    }
+}
