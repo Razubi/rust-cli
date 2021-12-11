@@ -5,7 +5,7 @@ mod run;
 pub use anyhow::Context;
 pub use structopt::StructOpt;
 
-
-fn main() {
-    println!("Hello, world!");
+fn main() -> anyhow::Result<()> {
+    run::run(args::Arguements::from_args())?;
+    Ok(())
 }
